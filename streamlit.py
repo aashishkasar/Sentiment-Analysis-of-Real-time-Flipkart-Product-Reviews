@@ -23,23 +23,23 @@ def process_review(review, model):
 
 def model_selection(text_processing_method,ml_model):
     if text_processing_method == "Regular":
-        vectorizer = load('/Users/vamsi/Downloads/sentimental analysis/reviews_data_dump/tfidf1.joblib')
+        vectorizer = load('/tfidf1.joblib')
         if ml_model == "KNN":
-            return (load('/Users/vamsi/Downloads/sentimental analysis/reviews_data_dump/model_r_knn.joblib'),vectorizer)
+            return (load('/model_r_knn.joblib'),vectorizer)
         elif ml_model == "Logistic Regression":
-            return (load('/Users/vamsi/Downloads/sentimental analysis/reviews_data_dump/model_r_log.joblib'),vectorizer)
+            return (load('/model_r_log.joblib'),vectorizer)
     elif text_processing_method == "Stemming":
-        vectorizer = load('/Users/vamsi/Downloads/sentimental analysis/reviews_data_dump/tfidf2.joblib')
+        vectorizer = load('/tfidf2.joblib')
         if ml_model == "KNN":
-            return (load('/Users/vamsi/Downloads/sentimental analysis/reviews_data_dump/model_s_knn.joblib'),vectorizer)
+            return (load('/model_s_knn.joblib'),vectorizer)
         elif ml_model == "Logistic Regression":
-            return (load('/Users/vamsi/Downloads/sentimental analysis/reviews_data_dump/model_s_log.joblib'),vectorizer)
+            return (load('/model_s_log.joblib'),vectorizer)
     else:
-        vectorizer = load('/Users/vamsi/Downloads/sentimental analysis/reviews_data_dump/tfidf3.joblib')
+        vectorizer = load('/tfidf3.joblib')
         if ml_model == "KNN":
-                return (load('/Users/vamsi/Downloads/sentimental analysis/reviews_data_dump/model_l_knn.joblib'),vectorizer)
+                return (load('/model_l_knn.joblib'),vectorizer)
         elif ml_model == "Logistic Regression":
-                return (load('/Users/vamsi/Downloads/sentimental analysis/reviews_data_dump/model_l_log.joblib'),vectorizer)
+                return (load('/model_l_log.joblib'),vectorizer)
 
 
 
